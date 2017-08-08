@@ -25,6 +25,9 @@ nav.navbar img{
     max-width: 250px;
     margin-top: -55px;
 }
+a[href*="mailto"]{
+    color: #bd9b3b;
+}
 /*Sections*/
 .intro{
     background-image: url(../images/image1.jpg);
@@ -40,14 +43,21 @@ section  div.overlay{
     background-color: rgba(0, 0, 0, 0.4);
     height: 100%; /*Black overlay filter for history sectino*/
 } 
+.press .flexParent{
+    height: 100%;
+    margin-top:15%;
+}
 /*end intro*/
-.history, .press, .contactUs{
-    /*height: 700px;*/
+.press, .history, .contactUs{
     height: auto;
 }
-.press img{
+.press img[alt*="HBO"]{
     width: 100%;
-    max-width: 400px;
+    max-width: 200px;
+}
+.press img[alt*="NYC"] {
+    width: 100%;
+    max-width: 140px;
 }
 .history {
     background-image: url(../images/dsc_0198.jpg);
@@ -108,6 +118,17 @@ footer img{
 img[alt*="Facebook"], img[alt*="Auction"]{
     margin-right: 15px;
 }
+footer img, img[alt*="Twitter"], img[alt*="Facebook"]{
+    max-width: 60px;
+    margin-top: 15px;
+    -webkit-filter: grayscale(50%); /* Safari */
+    filter: grayscale(80%);
+    transition: filter 1s;
+}
+footer img:hover, img[alt*="Twitter"]:hover, img[alt*="Facebook"]:hover{
+    -webkit-filter: grayscale(0%); /* Safari */
+    filter: grayscale(0%);
+}
 /*Typography*/
 
 h1 {color:#bd9b3b; font-family: 'Poiret One', courier, sans-serif; font-size: 4.5em;} /*Main title*/
@@ -125,17 +146,7 @@ nav a{
 footer p{
     font-size: 1.3em;
 }
-footer img{
-    max-width: 60px;
-    margin-top: 30px;
-    -webkit-filter: grayscale(50%); /* Safari */
-    filter: grayscale(80%);
-    transition: filter 1s;
-}
-footer img:hover{
-    -webkit-filter: grayscale(0%); /* Safari */
-    filter: grayscale(0%);
-}
+
 p.hours {
     font-size:2em;
 }
@@ -154,6 +165,8 @@ p.hours {
 @media only screen and (min-width:1200px) {
     .intro h1, .intro p{margin-top:50%;}
     .intro h1 {font-size: 5em; }
+    .press{
+    height: 500px;}
 }
 /*big screen*/
 @media only screen and (max-width:1199px) {
@@ -165,6 +178,9 @@ p.hours {
     }
     .press div.col-lg-2{
     display: none;
+    }
+    .press .flexParent{
+        margin: 100px auto;
     }
 }
 /*phone*/
