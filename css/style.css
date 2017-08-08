@@ -1,0 +1,197 @@
+/*Global*/
+body{
+    background-image: url(../images/soft_kill.png);
+    background-size: 20px;
+    background-color:black;
+}
+.flexParent{
+    
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    //display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: center;
+    height: 700px;
+/*    flex-wrap: wrap;*/
+}
+
+/*Navigation*/
+[class*="nav"]{ /*transparency for default white background on nav*/
+    background-color:transparent;
+    border:none;
+    margin-top: 15px;
+}
+nav.navbar img{
+    max-width: 250px;
+    margin-top: -55px;
+}
+/*Sections*/
+.intro{
+    background-image: url(../images/image1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height:600px;
+    width: 100%;
+    margin-top: 30px;
+}
+section  div.overlay{
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%; /*Black overlay filter for history sectino*/
+} 
+/*end intro*/
+.history, .press, .contactUs{
+    /*height: 700px;*/
+    height: auto;
+}
+.press img{
+    width: 100%;
+    max-width: 400px;
+}
+.history {
+    background-image: url(../images/dsc_0198.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+section.contactUs input{
+    background-color:#bd9b3b;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    transition: all 0.5s;
+}
+section.contactUs input:hover{
+    color:#CEAC4C;
+    background-color: transparent;
+    border: 2px solid #bd9b3b;
+    box-shadow: 0 0 5px 4px black;
+    padding: 6px 8px;
+}
+section.contactUs a, section.contactUs a:link, section.contactUs a:visited{
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+}
+/*CONTACT PAGE*/
+#hours {
+    margin-top: 20 px;
+    margin-bottom: 100px;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+div#information {
+    border-bottom: 2px solid #bd9b3b;
+    padding-bottom: 20px;
+}
+#pad-left{
+    padding-left: 30px;
+/*    font-size: 3rem;*/
+    margin-top: 20px;
+}
+/*Footer*/
+footer{
+    background-color:#000;
+    height: auto;
+    margin-bottom: 50px;
+}
+footer img{
+    width: 40%;
+}
+img[alt*="Facebook"], img[alt*="Auction"]{
+    margin-right: 15px;
+}
+/*Typography*/
+
+h1 {color:#bd9b3b; font-family: 'Poiret One', courier, sans-serif; font-size: 4.5em;} /*Main title*/
+.intro p{
+color:#ddd; text-transform:uppercase;
+} /*intro*/
+h3 {font-family: 'Poiret One', courier, sans-serif; font-size: 2.5em; color: #bd9b3b;} /*footer navigation*/
+p{color:#fff; font-size:1.7em; line-height: 1.5; font-family: 'Quicksand', helvetica, sans-serif; font-weight: 300; background-color:rgba(0,0,0,0.2);}
+nav a:hover, nav a:active {
+    color: #bd9b3b !important; 
+}
+nav a{
+    font-size: 1.5em;
+}
+footer p{
+    font-size: 1.3em;
+}
+footer img{
+    max-width: 60px;
+    margin-top: 30px;
+    -webkit-filter: grayscale(50%); /* Safari */
+    filter: grayscale(80%);
+    transition: filter 1s;
+}
+footer img:hover{
+    -webkit-filter: grayscale(0%); /* Safari */
+    filter: grayscale(0%);
+}
+p.hours {
+    font-size:2em;
+}
+
+#map{
+        margin-top:15px;
+        margin-bottom: 30px;
+        display:block;
+        width: 100%;
+        max-width: 1000px;
+        height: 400px;
+    }
+
+ /* Media queries */
+/*extra big screens*/
+@media only screen and (min-width:1200px) {
+    .intro h1, .intro p{margin-top:50%;}
+    .intro h1 {font-size: 5em; }
+}
+/*big screen*/
+@media only screen and (max-width:1199px) {
+    h1{text-align: center;}
+    .intro h1{margin-top: 30%;}
+    .contactUs{
+    height: 800px; 
+    margin-top: 15px;
+    }
+    .press div.col-lg-2{
+    display: none;
+    }
+}
+/*phone*/
+@media only screen and (max-width:500px) {
+    #map{
+        display: none;
+    }
+    span.days{
+        display: block;
+    }
+    .contactUs p{
+        margin:10px 0;
+    }
+}
+@media only screen and (max-width:767px) {
+    footer{
+        margin-top: 150px;
+    }
+    .flexParent {
+        flex-wrap: wrap;
+    }
+    .press img {
+        border:5px solid green; //quitar
+    }
+}
+@media only screen and (max-width:1199px) and (min-width: 768px) {
+    section.contactUs{
+        height: 650px;
+    }
+}
