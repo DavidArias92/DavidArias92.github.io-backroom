@@ -119,7 +119,7 @@ img[alt*="Facebook"], img[alt*="Auction"]{
     margin-right: 15px;
 }
 footer img, img[alt*="Twitter"], img[alt*="Facebook"]{
-    max-width: 60px;
+    max-width: 50px;
     margin-top: 15px;
     -webkit-filter: grayscale(50%); /* Safari */
     filter: grayscale(80%);
